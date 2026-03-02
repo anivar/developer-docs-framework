@@ -19,3 +19,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+ATTRIBUTION NOTICE
+
+This framework synthesizes principles from:
+
+- Diataxis by Daniele Procida (CC BY-SA 4.0) — https://diataxis.fr/
+- Google OpenDocs by Google LLC (Apache 2.0) — https://github.com/google/opendocs
+- Good Docs Project (CC BY 4.0) — https://www.thegooddocsproject.dev/
+- Google Developer Documentation Style Guide by Google LLC (CC BY 4.0) — https://developers.google.com/style
+- Stripe Documentation Patterns — https://docs.stripe.com/
+- Canonical Documentation Practice — https://canonical.com/documentation

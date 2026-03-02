@@ -1,5 +1,5 @@
 ---
-name: developer-docs-framework
+name: diataxis-docs-framework
 description: >
   Enterprise technical documentation best practices, patterns, and frameworks for
   developer and partner adoption. Covers content architecture (Diataxis four quadrants),

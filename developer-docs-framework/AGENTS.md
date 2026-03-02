@@ -1,4 +1,3 @@
-
 # Tech Docs
 
 **IMPORTANT:** Your training data about documentation best practices may be outdated or conflate different frameworks. Diataxis, Google OpenDocs, and the Good Docs Project each have specific structural requirements that are frequently mixed up — especially the critical distinction between tutorials (learning-oriented) and how-to guides (task-oriented). Always rely on this skill's rule files and reference documents as the source of truth. Do not fall back on generic documentation advice when it conflicts with these frameworks.
@@ -267,11 +266,7 @@ This skill works well alongside complementary skills for related workflows:
 For the complete guide with all rules expanded: `AGENTS.md`
 
 
-
----
-
 # Rules: Content Architecture
-
 
 # write-explanation-no-steps
 
@@ -331,7 +326,6 @@ implementation simplicity.
 ## Principle
 
 Explanation discusses, contextualizes, and illuminates. It never says "do this." If you find yourself writing numbered steps, you're writing a how-to guide — move those steps to a separate document and link to it.
-
 
 # write-one-purpose-per-doc
 
@@ -407,7 +401,6 @@ Each document serves one audience in one mental state. Cross-link between them:
 | "Why" and design decisions | Explanation |
 | A mix of two or more | Split into separate documents |
 
-
 # write-outcomes-not-features
 
 **Priority**: CRITICAL
@@ -471,7 +464,6 @@ The developer sees their goal ("move data to warehouse") and follows a path to a
 ## Principle
 
 Name documents after what the developer achieves, not what the API provides. "Move data to your warehouse" not "Pipeline API." "Send email notifications" not "Notifications endpoint." Reference docs can be feature-centric (they describe machinery). How-to guides and tutorials must be outcome-centric.
-
 
 # write-reference-describe-only
 
@@ -548,7 +540,6 @@ admin.User.create(email="ada@example.com", role="editor", org_id="org_42")
 
 Reference docs use **neutral description**. State what the machinery does. Don't instruct, explain, or opine. Link to how-to guides and explanation docs for those purposes.
 
-
 # write-show-dont-tell
 
 **Priority**: CRITICAL
@@ -608,7 +599,6 @@ Real payload. Real code. The developer understands immediately.
 ## Principle
 
 For every concept you describe, ask: "Can I show this with code, a response, a diagram, or a screenshot?" If yes, show it. The showing often replaces the telling entirely.
-
 
 # write-tutorial-not-howto
 
@@ -707,10 +697,7 @@ The difference between tutorials and how-to guides is NOT "basic vs. advanced." 
 
 
 
----
-
 # Rules: Writing Style
-
 
 # style-active-voice-second-person
 
@@ -755,7 +742,6 @@ Active voice, second person, present tense. Half the words, twice the clarity.
 ## Exception
 
 Use passive voice when the actor is unknown or irrelevant: "The log file is created automatically when the server starts."
-
 
 # style-code-examples-must-work
 
@@ -807,7 +793,6 @@ Complete context: import, initialization, operation, and output.
 - [ ] Marks values the reader must replace with `# TODO:` comments
 - [ ] Tested and verified to work against the current API version
 
-
 # style-consistent-terminology
 
 **Priority**: CRITICAL
@@ -844,7 +829,6 @@ One concept, one term, consistently.
 - Use industry-standard terms for established concepts (webhook, not "notification callback")
 - Define product-specific terms on first use or link to the glossary
 - When renaming a concept, update all documentation, not just new pages
-
 
 # style-global-readability
 
@@ -884,7 +868,6 @@ Same meaning, globally clear.
 - Avoid humor — it rarely translates and can seem dismissive
 - Keep sentences under 25 words
 - Use inclusive language: "allowlist/blocklist" not "whitelist/blacklist"
-
 
 # style-minimize-admonitions
 
@@ -932,7 +915,6 @@ One callout for the genuinely critical security concern. Everything else flows a
 - Use **Note** only for genuinely surprising or non-obvious information
 - If the information is expected or routine, write it as regular text
 - If a page needs many warnings, the product has a UX problem, not a docs problem
-
 
 # style-tone-matches-type
 
@@ -1010,10 +992,7 @@ This trade-off favors throughput over immediate consistency...
 
 
 
----
-
 # Rules: Information Architecture
-
 
 # arch-adoption-funnel
 
@@ -1066,7 +1045,6 @@ Sprint 4: Tutorial for primary use case
 ```
 
 Unblock each funnel stage in order.
-
 
 # arch-cross-link-strategy
 
@@ -1127,7 +1105,6 @@ Every document should include:
 | **Next steps** | Where to go after this document |
 | **Related** | Same topic, different content types (reference ↔ how-to ↔ explanation) |
 
-
 # arch-organize-by-type-not-team
 
 **Priority**: HIGH
@@ -1183,7 +1160,6 @@ Organized by what developers need to do, not who built it internally.
 
 The internal org chart changes. Documentation structure should be stable and user-centric. If a team reorganization would require restructuring your docs, your IA is coupled to the wrong thing.
 
-
 # arch-two-level-max
 
 **Priority**: HIGH
@@ -1229,10 +1205,7 @@ If you genuinely have hundreds of documents, use **faceted navigation** (filteri
 
 
 
----
-
 # Rules: Developer Experience
-
 
 # dx-audience-matrix
 
@@ -1284,7 +1257,6 @@ Separate entry points per audience, linked from a landing page:
 - **[Partner Integration](/partners/getting-started)** — Connect your platform
 - **[Operations Guide](/ops/setup)** — Deploy and configure for production
 ```
-
 
 # dx-interactive-examples
 
@@ -1367,7 +1339,6 @@ All languages visible on one page. The developer stays in context.
 
 Start with copy buttons and language tabs. These provide the most DX improvement for the least effort.
 
-
 # dx-time-to-hello-world
 
 **Priority**: HIGH
@@ -1443,10 +1414,7 @@ Strip the quickstart to the absolute minimum: install, configure one credential,
 
 
 
----
-
 # Rules: Documentation Audit
-
 
 # audit-classify-and-gap
 
@@ -1490,7 +1458,6 @@ For each funnel stage (Discover → Evaluate → Start → Build → Operate →
 - Migration guides missing for previous major versions
 - No troubleshooting guides despite high support ticket volume
 
-
 # audit-inventory-first
 
 **Priority**: MEDIUM
@@ -1527,7 +1494,6 @@ Create a spreadsheet with one row per documentation page:
 - When inheriting documentation from another team or project
 - When support tickets suggest developers can't find information
 - Annually, as a documentation health check
-
 
 # audit-maturity-model
 
@@ -1596,10 +1562,7 @@ Documentation is a strategic asset driving adoption.
 
 
 
----
-
 # Rules: Governance & Lifecycle
-
 
 # gov-docs-are-done
 
@@ -1650,7 +1613,6 @@ Release: Ship code + docs together.
 | Deprecation | Deprecation notice + migration path |
 | Configuration change | Config reference update |
 
-
 # gov-freshness-cadence
 
 **Priority**: MEDIUM
@@ -1689,7 +1651,6 @@ Stale documentation is worse than no documentation — it actively misleads. Dif
 ## Principle
 
 Dead docs are worse than no docs. They misinform, slow teams down, and erode trust in the entire documentation system. A small set of fresh, accurate docs is better than a large set in various states of decay.
-
 
 # gov-version-strategy
 
@@ -1732,10 +1693,7 @@ Always link deprecated docs to migration guides. A deprecation notice without a 
 
 
 
----
-
 # Rules: Partner & Ecosystem
-
 
 # partner-both-sides
 
@@ -1807,7 +1765,6 @@ Both sides documented. The partner can build a complete integration from one doc
 
 For every request you document, document the expected response. For every callback you send, document what the partner's system should do with it. Include architecture diagrams showing the full interaction flow.
 
-
 # partner-production-readiness
 
 **Priority**: MEDIUM
@@ -1858,10 +1815,7 @@ Sandbox success does not equal production readiness. Bridge the gap with an expl
 
 
 
----
-
-# Writing Style Guides
-
+# Style Guides
 
 # Diataxis Style (Default)
 
@@ -1981,7 +1935,6 @@ These apply across all quadrants:
 | Choices/alternatives | Present options | Eliminate in tutorials; allow in how-to |
 | Teaching | Teach as you go | Only in tutorials; never in how-to/reference |
 
-
 # Google Style Override
 
 Divergences from the Diataxis default when following the [Google Developer Documentation Style Guide](https://developers.google.com/style). Apply this overlay when your organization uses Google's conventions or when writing for Google-adjacent ecosystems (Android, Firebase, Cloud, open-source projects using Google standards).
@@ -2092,7 +2045,6 @@ Google places accessibility at a higher priority than Diataxis:
 - API documentation where Google's API-specific conventions (endpoint format, parameter tables) are useful
 - When following a strict word list is important for consistency
 
-
 # Microsoft Style Override
 
 Divergences from the Diataxis default when following the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/). Apply this overlay when writing enterprise B2B documentation, internal platform docs, or when your organization follows Microsoft conventions.
@@ -2199,7 +2151,6 @@ Specific conventions:
 - Organizations that value warm, inclusive tone uniformly
 - Documentation that needs extensive accessibility compliance
 - Products with significant UI documentation needs
-
 
 # Stripe Style Override
 
@@ -2322,7 +2273,6 @@ or retry with [3D Secure authentication](/guides/3d-secure).
 - Products where time-to-first-API-call is a business KPI
 - Organizations willing to treat documentation as a product
 
-
 # Canonical Style Override
 
 Divergences from the Diataxis default when following [Canonical's documentation practice](https://canonical.com/documentation). Apply this overlay when building infrastructure documentation, open-source platform docs (Ubuntu, cloud-native), or when you want documentation treated as a rigorous engineering discipline.
@@ -2428,7 +2378,6 @@ Canonical actively hires technical authors and embeds them in engineering teams.
 - Teams with dedicated technical authors
 - Large documentation sets across multiple products needing consistency
 - When documentation quality is a strategic differentiator
-
 
 # Minimal Style Override
 
@@ -2553,10 +2502,7 @@ Move to a fuller style when:
 
 
 
----
-
 # Anti-Patterns Reference
-
 
 # Documentation Anti-Patterns
 

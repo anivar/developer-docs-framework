@@ -1,4 +1,4 @@
-# developer-docs-framework
+# diataxis-docs-framework
 
 Enterprise technical documentation framework — 27 rules, 11 references, 6 pluggable style guides. Content architecture, writing standards, information architecture, DX strategy, documentation audit, anti-patterns checklist.
 
@@ -26,7 +26,7 @@ A comprehensive framework for writing, planning, auditing, and improving technic
 ## Structure
 
 ```
-developer-docs-framework/
+diataxis-docs-framework/
 ├── SKILL.md                        — Quick reference, rule summaries, decision trees
 ├── AGENTS.md                       — Complete compiled guide with all rules expanded
 ├── references/
@@ -63,10 +63,27 @@ developer-docs-framework/
 | Stripe Docs | DX-first documentation patterns | [docs.stripe.com](https://docs.stripe.com/) |
 | Canonical | Documentation as engineering practice | [canonical.com/documentation](https://canonical.com/documentation) |
 
+## Attribution
+
+This framework synthesizes and builds upon six established documentation methodologies. The original frameworks, their authors, and licenses:
+
+| Framework | Author / Maintainer | License | Link |
+|-----------|-------------------|---------|------|
+| **Diataxis** | Daniele Procida | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | [diataxis.fr](https://diataxis.fr/) |
+| **Google OpenDocs** | Google LLC | [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | [github.com/google/opendocs](https://github.com/google/opendocs) |
+| **Good Docs Project** | The Good Docs Project contributors | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [thegooddocsproject.dev](https://www.thegooddocsproject.dev/) |
+| **Google Developer Documentation Style Guide** | Google LLC | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [developers.google.com/style](https://developers.google.com/style) |
+| **Stripe Documentation Patterns** | Stripe, Inc. | Patterns observed from public documentation | [docs.stripe.com](https://docs.stripe.com/) |
+| **Canonical Documentation Practice** | Canonical Ltd. | Public methodology | [canonical.com/documentation](https://canonical.com/documentation) |
+
+The rules, examples, anti-patterns, and templates in this framework are original work that applies and extends the principles from these sources. No content is copied verbatim from the source frameworks.
+
 ## Author
 
 **Anivar Aravind** — [anivar.net](https://anivar.net)
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE) for details.
+
+Note: While this framework itself is MIT-licensed, the underlying methodologies have their own licenses (listed above). If you redistribute portions that closely follow a specific framework's structure, respect that framework's license terms.
