@@ -15,6 +15,9 @@ A consolidated checklist of documentation smells — common mistakes that reduce
 
 ## Structural Anti-Patterns
 
+### The Empty Scaffold
+Creating four empty sections labeled Tutorials / How-to / Reference / Explanation before writing any content. Diataxis changes structure from the inside — it doesn't start with empty shells. **Fix**: Pick any existing piece of documentation, classify it, improve it, repeat. Structure emerges organically.
+
 ### The Kitchen Sink Page
 A single page that mixes tutorial steps, API reference tables, conceptual explanations, and troubleshooting tips. Serves no audience well because every reader must scan past irrelevant content. **Fix**: Split into one document per Diataxis purpose and cross-link between them.
 
@@ -55,6 +58,12 @@ Content that describes what something "can do" without showing it. Four paragrap
 ### The Choices Buffet
 Tutorials or quickstarts that offer multiple paths ("You can use Python, Node.js, Go, or Java. If you're using Docker, see..."). **Fix**: In tutorials, eliminate choices — pick one path. In how-to guides, offer alternatives only when the reader's context genuinely varies.
 
+### The Abstraction Trap
+Tutorials that generalize instead of staying concrete. "You could use any database here" instead of "Use PostgreSQL." Abstraction and generalisation are anti-pedagogical temptations — they feel intellectually honest but undermine learning. **Fix**: Be concrete and particular. Refer to specific, known, defined tools.
+
+### The "You Will Learn" Promise
+Tutorials that begin with "In this tutorial, you will learn..." — a presumptuous claim about what happens in someone else's mind. **Fix**: Describe what they'll *build*, not what they'll *learn*: "By the end of this tutorial, you'll have a working notification service."
+
 ---
 
 ## Style Anti-Patterns
@@ -72,7 +81,13 @@ Prose full of idioms, slang, and culturally specific metaphors: "out of the box,
 Pages cluttered with warning boxes, note blocks, and tip callouts every few paragraphs. The important warnings drown in noise. **Fix**: Limit to 1-2 admonitions per page. Reserve warnings for genuine risks (data loss, security). Integrate minor notes into prose.
 
 ### The Mismatched Tone
-Tutorial written in reference style ("The `authenticate()` method accepts a `credentials` parameter of type `AuthCredentials`"). Or reference written in tutorial style ("Let's learn about the token endpoint!"). **Fix**: Match tone to Diataxis quadrant — encouraging for tutorials, direct for how-to, neutral for reference, conversational for explanation.
+Tutorial written in reference style ("The `authenticate()` method accepts a `credentials` parameter of type `AuthCredentials`"). Or reference written in tutorial style ("Let's learn about the token endpoint!"). **Fix**: Match tone to Diataxis quadrant — encouraging for tutorials, direct for how-to, austere for reference, conversational for explanation.
+
+### The UI Narrator
+How-to guides that merely narrate the interface: "To deploy, click the Deploy button." This looks like guidance but is useless — anyone with basic competence knows how a button works. **Fix**: Address the real problem the user is solving. Document the thinking and judgement involved, not just which button to click.
+
+### The Flowless Guide
+How-to guides with badly-judged pace that force readers to hold too many open thoughts before resolving them in action. Steps that jump between unrelated concepts. **Fix**: Design for flow — ground sequences in the user's activity patterns so the guide appears to anticipate what they need next.
 
 ### The Broken Example
 Code examples that are missing imports, use undefined variables, reference deprecated APIs, or simply don't compile. **Fix**: Every code example must include imports, initialization, the operation, and expected output. Test examples in CI.

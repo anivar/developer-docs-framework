@@ -68,6 +68,6 @@ This trade-off favors throughput over immediate consistency...
 |------|------|-----------------|
 | Tutorial | Encouraging, patient | "Let's create...", "You should see..." |
 | How-to | Direct, efficient | "Configure the...", "Run the command..." |
-| Reference | Neutral, precise | "Returns a...", "Accepts a string..." |
+| Reference | Austere, precise | "Returns a...", "Accepts a string..." |
 | Explanation | Thoughtful, exploratory | "The reason for...", "This means that..." |
 | Troubleshooting | Calm, reassuring | "If you see this error...", "This usually means..." |

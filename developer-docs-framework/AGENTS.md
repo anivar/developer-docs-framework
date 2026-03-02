@@ -171,13 +171,34 @@ When planning documentation work (not single documents), use Google OpenDocs arc
 | **The Rules** | Creating contributor guidelines and style standards |
 | **The Study** | Investigating user needs and documentation usage patterns |
 
+## The Diataxis Map
+
+| | Tutorials | How-to Guides | Reference | Explanation |
+|-|-|-|-|-|
+| **What they do** | Introduce, educate, lead | Guide | State, describe, inform | Explain, clarify, discuss |
+| **Answers** | "Can you teach me to...?" | "How do I...?" | "What is...?" | "Why...?" |
+| **Oriented to** | Learning | Goals | Information | Understanding |
+| **Purpose** | Provide a learning experience | Help achieve a goal | Describe the machinery | Illuminate a topic |
+| **Form** | A lesson | A series of steps | Austere description | Discursive explanation |
+| **Analogy** | Teaching a child to cook | A recipe in a cookbook | Info on a food packet | Article on culinary history |
+
 ## Quality Standards
 
-Every document should pass two quality checks:
+Diataxis distinguishes two categorically different types of quality:
 
-**Functional quality** (measurable): Accurate, Complete, Consistent, Current
+**Functional quality** (objective, measurable, independent): Accurate, Complete, Consistent, Current, Precise
 
-**Deep quality** (experiential): Flows naturally, Anticipates needs, Respects reader's time, Feels trustworthy
+**Deep quality** (subjective, interdependent, conditional on functional quality): Feels good to use, Has flow, Fits human needs, Anticipates the user
+
+Diataxis addresses deep quality — it cannot fix inaccurate content, but it *exposes* functional quality problems by making them visible when documentation is properly structured.
+
+## How to Apply Diataxis
+
+**Don't create empty structures.** Getting started does not mean dividing docs into four empty sections labeled tutorials/howto/reference/explanation. That's horrible. Diataxis changes structure from the inside.
+
+**Work iteratively.** Pick any piece of documentation. Ask: what user need does this serve? How well? What one change would improve it? Do it. Repeat. Small, responsive iterations over top-down planning.
+
+**Complete, not finished.** Like a living plant, your documentation is never finished (it can always grow) but always complete (nothing is missing at this stage of growth). Every stage from seed to mature tree is whole.
 
 ## How to Use
 
@@ -675,8 +696,14 @@ exceed thresholds.
 | Goal | Acquire skills and confidence | Complete a specific task |
 | Tone | "Let's build..." | "Configure the..." |
 | Explanation | Minimal — just enough to proceed | None — link to explanation docs |
-| Choices | Eliminated — one path only | May offer alternatives |
+| Choices | Eliminated — one path only | May fork and branch |
+| Path | Carefully managed, safe, predictable | Real world — must prepare for the unexpected |
+| Responsibility | Lies with the teacher | Lies with the user |
 | Success metric | Reader understands | Task is done |
+
+## Common Misconception
+
+The difference between tutorials and how-to guides is NOT "basic vs. advanced." How-to guides can cover basic procedures, and tutorials can be very advanced. The distinction is always about **study vs. work** — not complexity level. An experienced engineer attending a training workshop on a new framework is in a tutorial (learning) situation despite their expertise.
 
 
 
@@ -977,7 +1004,7 @@ This trade-off favors throughput over immediate consistency...
 |------|------|-----------------|
 | Tutorial | Encouraging, patient | "Let's create...", "You should see..." |
 | How-to | Direct, efficient | "Configure the...", "Run the command..." |
-| Reference | Neutral, precise | "Returns a...", "Accepts a string..." |
+| Reference | Austere, precise | "Returns a...", "Accepts a string..." |
 | Explanation | Thoughtful, exploratory | "The reason for...", "This means that..." |
 | Troubleshooting | Calm, reassuring | "If you see this error...", "This usually means..." |
 
@@ -1862,19 +1889,18 @@ These apply across all quadrants:
 | Pattern | Example |
 |---------|---------|
 | Opening | "In this tutorial, we will build a..." |
-| Sequencing | "First, do x. Now, do y." |
+| Sequencing | "First, do x. Now, do y." (no room for ambiguity) |
 | Setting expectations | "The output should look something like..." |
-| Prompting observation | "Notice that the response includes..." |
-| Minimal explanation | "We use HTTPS because it's more secure." |
-| Celebrating progress | "You have built a working payment integration." |
+| Prompting observation | "Notice that...", "Let's check...", "Remember that..." |
+| Minimal explanation | "We must always do x before y because..." (link to more) |
+| Celebrating progress | "You have built a working notification service." |
 
 **What to avoid:**
-- Extended explanation (link to explanation docs)
-- Options or alternatives ("you could also use...") — pick one path
-- Abstract generalization — stay concrete and specific
+- The five anti-pedagogical temptations: **abstraction, generalisation, explanation, choices, information**
 - "In this tutorial you will learn..." — describe what they'll *build*, not what they'll *learn*
+- Irreversible steps that prevent the learner from repeating the exercise
 
-**The teacher's contract:** You bear responsibility for the learner's success. If they follow your steps and fail, the tutorial is broken, not the learner.
+**The teacher's contract:** You are required to be present, but condemned to be absent. You bear responsibility for the learner's success. If they follow your steps and fail, the tutorial is broken, not the learner. Design for "the feeling of doing" — the joined-up sense of purpose, action, thinking, and result.
 
 ### How-to Guides — Task-Oriented
 
@@ -1888,15 +1914,16 @@ These apply across all quadrants:
 | Conditional steps | "If you need X, do Y. To achieve W, do Z." |
 | Assumed competence | No re-explaining fundamentals |
 | Linking reference | "Refer to the [config reference] for all options." |
-| Goal framing | "How to handle failed payments" not "PaymentError class" |
+| Goal framing | "How to handle delivery failures" not "DeliveryError class" |
 
 **What to avoid:**
 - Teaching or explaining concepts (link to tutorials/explanation)
-- Describing tool mechanics the reader already knows
+- "Fake guidance" that narrates the UI ("Click Deploy to deploy")
 - Listing every parameter (that's reference)
 - Being so procedural it can't adapt to real-world variation
+- Disrupting flow with tangential information
 
-**Key insight:** How-to guides address a human need ("I need to handle errors"), not a tool function ("here's the error API"). Frame everything around what the user wants to achieve.
+**Key insight:** How-to guides address a human need ("I need to handle errors"), not a tool function ("here's the error API"). They include thinking and judgement — not just procedural steps. At its best, a how-to guide anticipates the user like a helper who has the tool you were about to reach for.
 
 ### Reference — Information-Oriented
 
@@ -1928,11 +1955,12 @@ These apply across all quadrants:
 
 | Pattern | Example |
 |---------|---------|
-| Contextualizing | "The reason we chose eventual consistency is..." |
-| Alternatives | "We considered X, but it would have meant..." |
-| Connections | "This is similar to how DNS resolution works." |
+| Contextualizing | "The reason for x is because historically, y..." |
+| Offering judgements | "W is better than z, because..." |
+| Alternatives | "Some users prefer w (because z). This can be a good approach, but..." |
+| Connections | "An x in system y is analogous to a w in system z. However..." |
+| Unfolding secrets | "An x interacts with a y as follows:..." |
 | Trade-offs | "This favors throughput over immediate consistency." |
-| Admitting complexity | "There's no perfect solution here — each approach trades..." |
 
 **What to avoid:**
 - Step-by-step procedures (that's a how-to guide)
@@ -1940,7 +1968,7 @@ These apply across all quadrants:
 - Staying strictly neutral — explanation should have perspective
 - Being so abstract that no one benefits
 
-**Key insight:** Explanation is the only quadrant where opinion and perspective are not just allowed but encouraged. "We chose X because..." and "The downside of this approach is..." are exactly what explanation should contain.
+**Key insight:** Without explanation, practitioners' knowledge is loose, fragmented, and their practice is *anxious*. Explanation is the web that holds everything together. It is the only quadrant where opinion and perspective are not just allowed but encouraged. Scope each explanation with a "why" question. If you can imagine reading it in the bath or discussing it over coffee, it's probably explanation.
 
 ## How Diataxis Style Differs from Generic Style Guides
 
@@ -2547,6 +2575,9 @@ A consolidated checklist of documentation smells — common mistakes that reduce
 
 ## Structural Anti-Patterns
 
+### The Empty Scaffold
+Creating four empty sections labeled Tutorials / How-to / Reference / Explanation before writing any content. Diataxis changes structure from the inside — it doesn't start with empty shells. **Fix**: Pick any existing piece of documentation, classify it, improve it, repeat. Structure emerges organically.
+
 ### The Kitchen Sink Page
 A single page that mixes tutorial steps, API reference tables, conceptual explanations, and troubleshooting tips. Serves no audience well because every reader must scan past irrelevant content. **Fix**: Split into one document per Diataxis purpose and cross-link between them.
 
@@ -2587,6 +2618,12 @@ Content that describes what something "can do" without showing it. Four paragrap
 ### The Choices Buffet
 Tutorials or quickstarts that offer multiple paths ("You can use Python, Node.js, Go, or Java. If you're using Docker, see..."). **Fix**: In tutorials, eliminate choices — pick one path. In how-to guides, offer alternatives only when the reader's context genuinely varies.
 
+### The Abstraction Trap
+Tutorials that generalize instead of staying concrete. "You could use any database here" instead of "Use PostgreSQL." Abstraction and generalisation are anti-pedagogical temptations — they feel intellectually honest but undermine learning. **Fix**: Be concrete and particular. Refer to specific, known, defined tools.
+
+### The "You Will Learn" Promise
+Tutorials that begin with "In this tutorial, you will learn..." — a presumptuous claim about what happens in someone else's mind. **Fix**: Describe what they'll *build*, not what they'll *learn*: "By the end of this tutorial, you'll have a working notification service."
+
 ---
 
 ## Style Anti-Patterns
@@ -2604,7 +2641,13 @@ Prose full of idioms, slang, and culturally specific metaphors: "out of the box,
 Pages cluttered with warning boxes, note blocks, and tip callouts every few paragraphs. The important warnings drown in noise. **Fix**: Limit to 1-2 admonitions per page. Reserve warnings for genuine risks (data loss, security). Integrate minor notes into prose.
 
 ### The Mismatched Tone
-Tutorial written in reference style ("The `authenticate()` method accepts a `credentials` parameter of type `AuthCredentials`"). Or reference written in tutorial style ("Let's learn about the token endpoint!"). **Fix**: Match tone to Diataxis quadrant — encouraging for tutorials, direct for how-to, neutral for reference, conversational for explanation.
+Tutorial written in reference style ("The `authenticate()` method accepts a `credentials` parameter of type `AuthCredentials`"). Or reference written in tutorial style ("Let's learn about the token endpoint!"). **Fix**: Match tone to Diataxis quadrant — encouraging for tutorials, direct for how-to, austere for reference, conversational for explanation.
+
+### The UI Narrator
+How-to guides that merely narrate the interface: "To deploy, click the Deploy button." This looks like guidance but is useless — anyone with basic competence knows how a button works. **Fix**: Address the real problem the user is solving. Document the thinking and judgement involved, not just which button to click.
+
+### The Flowless Guide
+How-to guides with badly-judged pace that force readers to hold too many open thoughts before resolving them in action. Steps that jump between unrelated concepts. **Fix**: Design for flow — ground sequences in the user's activity patterns so the guide appears to anticipate what they need next.
 
 ### The Broken Example
 Code examples that are missing imports, use undefined variables, reference deprecated APIs, or simply don't compile. **Fix**: Every code example must include imports, initialization, the operation, and expected output. Test examples in CI.

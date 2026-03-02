@@ -198,13 +198,34 @@ When planning documentation work (not single documents), use Google OpenDocs arc
 | **The Rules** | Creating contributor guidelines and style standards |
 | **The Study** | Investigating user needs and documentation usage patterns |
 
+## The Diataxis Map
+
+| | Tutorials | How-to Guides | Reference | Explanation |
+|-|-|-|-|-|
+| **What they do** | Introduce, educate, lead | Guide | State, describe, inform | Explain, clarify, discuss |
+| **Answers** | "Can you teach me to...?" | "How do I...?" | "What is...?" | "Why...?" |
+| **Oriented to** | Learning | Goals | Information | Understanding |
+| **Purpose** | Provide a learning experience | Help achieve a goal | Describe the machinery | Illuminate a topic |
+| **Form** | A lesson | A series of steps | Austere description | Discursive explanation |
+| **Analogy** | Teaching a child to cook | A recipe in a cookbook | Info on a food packet | Article on culinary history |
+
 ## Quality Standards
 
-Every document should pass two quality checks:
+Diataxis distinguishes two categorically different types of quality:
 
-**Functional quality** (measurable): Accurate, Complete, Consistent, Current
+**Functional quality** (objective, measurable, independent): Accurate, Complete, Consistent, Current, Precise
 
-**Deep quality** (experiential): Flows naturally, Anticipates needs, Respects reader's time, Feels trustworthy
+**Deep quality** (subjective, interdependent, conditional on functional quality): Feels good to use, Has flow, Fits human needs, Anticipates the user
+
+Diataxis addresses deep quality — it cannot fix inaccurate content, but it *exposes* functional quality problems by making them visible when documentation is properly structured.
+
+## How to Apply Diataxis
+
+**Don't create empty structures.** Getting started does not mean dividing docs into four empty sections labeled tutorials/howto/reference/explanation. That's horrible. Diataxis changes structure from the inside.
+
+**Work iteratively.** Pick any piece of documentation. Ask: what user need does this serve? How well? What one change would improve it? Do it. Repeat. Small, responsive iterations over top-down planning.
+
+**Complete, not finished.** Like a living plant, your documentation is never finished (it can always grow) but always complete (nothing is missing at this stage of growth). Every stage from seed to mature tree is whole.
 
 ## How to Use
 

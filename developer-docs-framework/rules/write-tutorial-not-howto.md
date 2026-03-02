@@ -84,5 +84,11 @@ exceed thresholds.
 | Goal | Acquire skills and confidence | Complete a specific task |
 | Tone | "Let's build..." | "Configure the..." |
 | Explanation | Minimal — just enough to proceed | None — link to explanation docs |
-| Choices | Eliminated — one path only | May offer alternatives |
+| Choices | Eliminated — one path only | May fork and branch |
+| Path | Carefully managed, safe, predictable | Real world — must prepare for the unexpected |
+| Responsibility | Lies with the teacher | Lies with the user |
 | Success metric | Reader understands | Task is done |
+
+## Common Misconception
+
+The difference between tutorials and how-to guides is NOT "basic vs. advanced." How-to guides can cover basic procedures, and tutorials can be very advanced. The distinction is always about **study vs. work** — not complexity level. An experienced engineer attending a training workshop on a new framework is in a tutorial (learning) situation despite their expertise.

@@ -23,20 +23,27 @@ Detailed guidance for writing each enterprise documentation content type. Each s
 
 ## Tutorial
 
-**Quadrant**: Learning-oriented (Acquisition + Practical)
+**Quadrant**: Learning-oriented (Acquisition + Action)
 **Reader's mindset**: "I'm new to this and want to learn by doing"
+**Answers the question**: "Can you teach me to...?"
 
 ### Purpose
 
-A tutorial takes learners through a series of steps to complete a meaningful project. The goal is not task completion — it's skill acquisition. The learner should finish the tutorial feeling confident they can work with the product.
+A tutorial takes learners through a series of steps to complete a meaningful project. The goal is not task completion — it's skill acquisition. The learner should finish the tutorial having discovered what Diataxis calls "the feeling of doing" — a joined-up sense of purpose, action, thinking, and result that the accomplished practitioner experiences. Your challenge is to create a cradle for this feeling.
+
+Tutorials are genuinely hard to write well, and they consume remarkable effort to maintain. Changes often cascade through the entire learning journey. This is normal — accept it and invest accordingly.
 
 ### Writing Principles
 
-**Let learning happen through doing.** Provide activities that produce results, not lectures that explain concepts. If you catch yourself writing a paragraph of theory, stop and convert it into a step the reader performs.
+**Don't try to teach — provide a learning experience.** The first rule of teaching: don't try to teach by telling and explaining. Your job is to provide activities that produce results and let learning happen through doing. If you catch yourself writing a paragraph of theory, stop and convert it into a step the reader performs. Resist the anti-pedagogical temptations: abstraction, generalisation, explanation, choices, and information.
 
-**Show the destination first.** Tell learners what they'll build before they start. "By the end of this tutorial, you'll have a working payment integration that accepts credit cards and handles errors." This gives them motivation and a mental map.
+**Show the destination first.** Tell learners what they'll build before they start. "By the end of this tutorial, you'll have a working integration that receives events and logs them." This gives them motivation and a mental map. Describe what they'll *build*, not what they'll *learn* — "In this tutorial you will learn..." is a poor pattern.
 
 **Deliver visible results early.** Each step should produce something the learner can see — a running server, a response in the terminal, a rendered component. Long stretches without feedback erode confidence.
+
+**Point out what the learner should notice.** Learners are typically too focused on what they're doing to notice signs in their environment. Close the loops of learning by pointing things out in passing: "Notice that the response includes a `status` field — that will become important when we add error handling." Observation is an active skill the tutorial teaches.
+
+**Encourage repetition.** Design steps so they can be re-run. Learners return to and repeat exercises that give them success, for the pleasure of getting the expected result. Repetition is sometimes the only teacher.
 
 **Maintain narrative expectations.** After each step, tell the learner what they should see. "You should see a JSON response like this:" followed by the exact output. When reality matches expectation, confidence builds.
 
@@ -56,17 +63,20 @@ A tutorial takes learners through a series of steps to complete a meaningful pro
 
 ### Language
 
-- Use first-person plural: "Let's create our first endpoint"
+- Use first-person plural: "Let's create our first endpoint" (affirms the teacher-student relationship)
 - Be direct: "Create a file called `app.py`"
 - Affirm progress: "You've now built a working API"
+- Point out observations: "Notice that...", "Let's check..."
 
 ### Anti-patterns
 
-- Explaining concepts instead of guiding actions
+- Explaining concepts instead of guiding actions (abstraction, generalisation)
 - Offering choices between approaches
 - Assuming knowledge not covered in prerequisites
 - Steps that don't produce visible output
 - Mixing reference material into the flow
+- Saying "In this tutorial you will learn..." (describe what they'll build, not learn)
+- Irreversible steps that prevent repetition
 
 ---
 
@@ -109,38 +119,43 @@ A quickstart gets experienced developers from zero to "hello world" in minutes. 
 
 ## How-to Guide
 
-**Quadrant**: Task-oriented (Application + Practical)
+**Quadrant**: Task-oriented (Application + Action)
 **Reader's mindset**: "I need to accomplish something specific right now"
+**Answers the question**: "How do I...?"
 
 ### Purpose
 
 A how-to guide helps a competent user accomplish a real-world goal. The reader already understands the product basics — they need practical directions for a specific task.
 
+How-to guides are not merely procedural. Real-world problems don't always offer themselves up to linear solutions. The sequences of action sometimes need to fork and overlap, with multiple entry and exit points. A how-to guide addresses how the user *thinks* as well as what the user *does*.
+
 ### Writing Principles
 
-**Address a real human need, not a feature.** "How to handle failed payments" not "How to use the `PaymentError` class." Frame guides around what the user wants to achieve, not what the API exposes.
+**Address a real human need, not a feature.** "How to handle delivery failures" not "How to use the `DeliveryError` class." Frame guides around what the user wants to achieve, not what the API exposes. Beware of "fake guidance" that merely narrates the UI: "To deploy, click the Deploy button" is not real guidance — it's obvious. Real guidance addresses the thinking and judgement involved.
 
 **Assume competence.** The reader has completed the tutorial or quickstart. Don't re-explain fundamentals.
 
 **Stay focused on the task.** Eliminate teaching, theory, and tangential information. If context is needed, link to it.
 
-**Be adaptable.** Real-world situations vary. Where possible, explain the principle behind a step so readers can adapt to their specific context, rather than giving only rigid instructions.
+**Design for flow.** At its best, a how-to guide appears to *anticipate* the user — like a helper who has the tool you were about to reach for, ready to place it in your hand. Ground your sequences in the user's thinking patterns. Consider: How long do you require the user to hold thoughts open before they can be resolved in action? Badly-judged pace or disrupted rhythm damages flow.
 
-**Name it clearly.** "How to implement webhook signature verification" tells the reader exactly whether this guide solves their problem.
+**Be adaptable.** Real-world situations vary. Where possible, explain the principle behind a step so readers can adapt to their specific context, rather than giving only rigid instructions. Unlike tutorials, how-to guides may need to fork and branch.
+
+**Name it clearly.** "How to implement signature verification" tells the reader exactly whether this guide solves their problem.
 
 ### Structure
 
 1. Title: "How to [accomplish specific goal]"
 2. Introduction: One sentence describing what this achieves and when you'd need it
 3. Prerequisites: What must be in place before starting
-4. Steps: Numbered, goal-oriented, with code examples
+4. Steps: Goal-oriented, with code examples (may fork or branch when the problem demands it)
 5. Verification: How to confirm the task is complete
 6. Related guides: Links to related how-to guides
 
 ### Language
 
 - Use conditional imperatives: "If you need to handle retries, add..."
-- Be action-oriented: "Configure the webhook endpoint"
+- Be action-oriented: "Configure the storage bucket"
 - Address the reader directly: "You can verify this by..."
 
 ### Anti-patterns
@@ -148,6 +163,7 @@ A how-to guide helps a competent user accomplish a real-world goal. The reader a
 - Teaching concepts (that belongs in tutorials)
 - Including comprehensive parameter lists (that belongs in reference)
 - Explaining why the product works this way (that belongs in explanation)
+- Narrating the UI without adding real guidance ("Click Deploy to deploy")
 - Describing multiple approaches without recommending one
 
 ---
@@ -273,12 +289,13 @@ Troubleshooting guides help users diagnose and resolve problems. The reader is l
 
 ## API Reference
 
-**Quadrant**: Information-oriented (Application + Theoretical)
+**Quadrant**: Information-oriented (Application + Cognition)
 **Reader's mindset**: "I need exact specifications to write code against"
+**Answers the question**: "What is...?"
 
 ### Purpose
 
-API reference is the technical specification of your API. It describes every endpoint, parameter, response, and error with precision. Users consult it while coding — it needs to be accurate, complete, and fast to navigate.
+API reference is the technical specification of your API. It describes every endpoint, parameter, response, and error with precision. One hardly *reads* reference material; one *consults* it. It should be **austere** — deliberately stripped down, wholly authoritative. There should be no doubt or ambiguity in reference.
 
 ### Writing Principles
 
@@ -412,28 +429,35 @@ Changelogs track technical changes for developers. Release notes communicate cha
 
 ## Explanation
 
-**Quadrant**: Understanding-oriented (Acquisition + Theoretical)
+**Quadrant**: Understanding-oriented (Acquisition + Cognition)
 **Reader's mindset**: "I want to understand why things work this way"
+**Answers the question**: "Why...?"
 
 ### Purpose
 
-Explanation provides the "why" behind design decisions, architectural choices, and conceptual foundations. It's what turns a competent user into a knowledgeable one.
+Explanation provides the "why" behind design decisions, architectural choices, and conceptual foundations. Without explanation, a practitioner's knowledge is loose, fragmented, and fragile — and their exercise of the craft is *anxious*. Explanation is the web that holds everything together.
+
+Explanation is often not explicitly recognized in documentation. Instead, it tends to be scattered in small parcels within other sections. Centralizing it gives it the space it deserves.
 
 ### Writing Principles
 
+**Start with a "why" question.** Use a real or imagined *why* question as a prompt to scope the document: "Why does the system use eventual consistency?" This prevents the open-endedness that can make explanation hard to write.
+
 **Take a higher, wider view.** Step back from specific operations and discuss the bigger picture — design philosophy, trade-offs, historical context.
 
-**Make connections.** Link ideas together, even beyond your product. "This approach is similar to how DNS resolution works" helps readers build mental models.
+**Make connections.** Link ideas together, even beyond your product. "This approach is similar to how DNS resolution works" helps readers build mental models. Unfold the internal secrets of the machinery.
 
 **Admit alternatives and trade-offs.** Explanation should discuss what was considered and rejected, not just what was chosen. "We chose eventual consistency because strong consistency would add 200ms latency to every write."
 
+**Offer judgements and opinions.** Unlike reference (which is austere and neutral), explanation is the place for considered opinions: "X is better than Y because..." This is one of the key Diataxis distinctions.
+
 **Keep boundaries clear.** Don't slip into how-to instructions or reference-style parameter lists. Link to those documents instead.
 
-**Write for reflection, not action.** Explanation is best read away from the keyboard. The reader is thinking, not coding.
+**Write for reflection, not action.** Explanation is best read away from the keyboard — imagine reading it in the bath, or discussing it with a colleague over coffee. The reader is thinking, not coding.
 
 ### Structure
 
-1. Title: "Understanding [concept]" or "How [system] works"
+1. Title: "Understanding [concept]" or "How [system] works" or "About [topic]"
 2. Overview: Why this topic matters
 3. Key concepts: Core ideas explained with analogies and examples
 4. Design decisions: What was chosen and why
@@ -446,6 +470,7 @@ Explanation provides the "why" behind design decisions, architectural choices, a
 - Including step-by-step instructions
 - Being so abstract that no one benefits
 - Undervaluing explanation because it's "not actionable"
+- Not recognizing explanation as a distinct content type at all
 
 ---
 
