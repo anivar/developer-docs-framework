@@ -1,10 +1,10 @@
 # developer-docs-framework
 
-AI agent skill for enterprise technical documentation — 27 rules, 11 references, 6 pluggable style guides. Content architecture, writing standards, information architecture, DX strategy, documentation audit, anti-patterns checklist.
+Enterprise technical documentation framework — 27 rules, 11 references, 6 pluggable style guides. Content architecture, writing standards, information architecture, DX strategy, documentation audit, anti-patterns checklist.
 
-## What This Skill Does
+## What This Does
 
-Guides AI agents through writing, planning, auditing, and improving technical documentation for products that need developer and partner adoption. Synthesizes six proven frameworks:
+A comprehensive framework for writing, planning, auditing, and improving technical documentation for products that need developer and partner adoption. Synthesizes six proven frameworks:
 
 - **Diataxis** — Content architecture (tutorials, how-to guides, reference, explanation)
 - **Google OpenDocs** — Project archetypes, maturity assessment, audit methodology
