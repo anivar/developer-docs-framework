@@ -1,0 +1,66 @@
+[
+  {
+    "query": "write a getting started guide for our payments SDK, devs should go from install to the first charge",
+    "should_trigger": true
+  },
+  {
+    "query": "our docs folder is a mess, 40 markdown files and no structure. propose an information architecture",
+    "should_trigger": true
+  },
+  {
+    "query": "document this endpoint: POST /v1/refunds, here is the handler code",
+    "should_trigger": true
+  },
+  {
+    "query": "write the changelog for the 3.0 release from these merged PRs",
+    "should_trigger": true
+  },
+  {
+    "query": "we need a runbook for when the job queue backs up",
+    "should_trigger": true
+  },
+  {
+    "query": "review this README and tell me what partners integrating with us will miss",
+    "should_trigger": true
+  },
+  {
+    "query": "write a migration guide from v1 to v2 of our API, the breaking changes are listed in BREAKING.md",
+    "should_trigger": true
+  },
+  {
+    "query": "audit our developer portal for gaps",
+    "should_trigger": true
+  },
+  {
+    "query": "write a blog post announcing the new feature",
+    "should_trigger": false
+  },
+  {
+    "query": "add JSDoc comments to utils.ts",
+    "should_trigger": false
+  },
+  {
+    "query": "write a PRD for the loyalty feature",
+    "should_trigger": false
+  },
+  {
+    "query": "draft an email to customers about tonight's downtime",
+    "should_trigger": false
+  },
+  {
+    "query": "write a tweet for the release",
+    "should_trigger": false
+  },
+  {
+    "query": "fix the mkdocs build, it fails on a missing plugin",
+    "should_trigger": false
+  },
+  {
+    "query": "summarise this meeting transcript",
+    "should_trigger": false
+  },
+  {
+    "query": "write a cover letter for a technical writer job",
+    "should_trigger": false
+  }
+]

@@ -2,6 +2,12 @@
 
 Divergences from the Diataxis default when following Stripe's developer documentation patterns. Apply this overlay when building API-first products where developer adoption is the primary business metric, or when you want the gold standard of DX-focused documentation.
 
+## Contents
+
+- Where Stripe Agrees with Diataxis Default
+- Where Stripe Diverges
+- When to Choose Stripe Style
+
 ## Where Stripe Agrees with Diataxis Default
 
 - Content types are clearly separated
@@ -44,7 +50,7 @@ Code and documentation are viewed side-by-side, never requiring the developer to
 **Diataxis default:** Static code blocks with expected output.
 **Stripe override:** Code examples are interactive — copy-paste buttons, language selectors, and in some cases, executable directly from the documentation.
 
-```markdown
+````markdown
 # Diataxis default
 ```python
 payment = stripe.PaymentIntent.create(amount=2000, currency="usd")
@@ -70,7 +76,7 @@ intent = stripe.PaymentIntent.create(
   "status": "requires_payment_method"
 }
 ```
-```
+````
 
 ### Documentation as Product Culture
 

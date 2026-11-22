@@ -436,7 +436,7 @@ This describes what exists. The developer must figure out how these pieces solve
 
 Outcome-centric documentation:
 
-```markdown
+````markdown
 # Move Data from PostgreSQL to Your Data Warehouse
 
 Set up a data sync in three steps:
@@ -457,7 +457,7 @@ pipeline = dataflow.Pipeline.create(
 
 ## 3. Start the sync
 ...
-```
+````
 
 The developer sees their goal ("move data to warehouse") and follows a path to achieve it.
 
@@ -476,7 +476,7 @@ Reference documentation is the map of your product. Maps don't tell you where to
 
 ## Incorrect
 
-```markdown
+````markdown
 # POST /v1/users
 
 You should use this endpoint to create a new user. First,
@@ -492,13 +492,13 @@ user = admin.User.create(email="ada@example.com", role="viewer")
 ```
 
 The role field uses RBAC because it provides fine-grained access control.
-```
+````
 
 This mixes instruction ("first, make sure"), opinion ("we recommend"), how-to ("here's how"), and explanation ("because it provides").
 
 ## Correct
 
-```markdown
+````markdown
 # POST /v1/users
 
 Creates a new user in the specified organization.
@@ -534,7 +534,7 @@ admin.User.create(email="ada@example.com", role="editor", org_id="org_42")
 |------|-------------|
 | `email_taken` | A user with this email already exists in the organization. |
 | `invalid_role` | Role must be one of: owner, admin, editor, viewer. |
-```
+````
 
 ## Principle
 
@@ -564,7 +564,7 @@ Four sentences of telling. No showing. The developer has no idea what an event l
 
 ## Correct
 
-```markdown
+````markdown
 # Event Streams
 
 Subscribe to a stream and process events as they arrive:
@@ -592,7 +592,7 @@ for event in consumer.stream():
     print(f"Order {event.data['order_id']} shipped")
     event.ack()
 ```
-```
+````
 
 Real payload. Real code. The developer understands immediately.
 
@@ -613,7 +613,7 @@ The most common conflation in software documentation is between tutorials and ho
 
 A "tutorial" that's actually a how-to guide:
 
-```markdown
+````markdown
 # Tutorial: Configure Email Alerts
 
 To set up email alerts, add the recipient list in your dashboard settings.
@@ -632,7 +632,7 @@ monitoring.AlertRule.create(
     recipients=["ops@example.com"],
 )
 ```
-```
+````
 
 This assumes the reader already knows what alerts are, why they'd want them, and how their system should handle them. That's a how-to guide labeled as a tutorial.
 
@@ -1269,7 +1269,7 @@ Interactive examples — runnable sandboxes, multi-language code tabs, "try it" 
 
 ## Incorrect
 
-```markdown
+````markdown
 Here's how to upload a file in Python:
 
 ```python
@@ -1278,7 +1278,7 @@ storage.upload("my-bucket", file="report.csv")
 
 For Node.js, see our [Node.js guide](/guides/node).
 For Go, see our [Go guide](/guides/go).
-```
+````
 
 Forces language-switching developers to navigate away.
 
@@ -1371,7 +1371,7 @@ Create a service account and generate credentials...
 
 ## Correct
 
-```markdown
+````markdown
 # Quickstart
 
 ## Install
@@ -1404,7 +1404,7 @@ SMS.
 ## Next steps
 - [Tutorial: Build a notification service](/tutorials/notifications)
 - [API reference](/reference)
-```
+````
 
 Three steps. Under 5 minutes. Working result.
 
@@ -1723,7 +1723,7 @@ Only your side documented. The partner doesn't know: What does the telemetry pay
 
 ## Correct
 
-```markdown
+````markdown
 # Device Telemetry Integration
 
 ## 1. Register your endpoint (your side → our API)
@@ -1757,7 +1757,7 @@ If your endpoint returns non-200 or times out:
 - We retry 3 times with exponential backoff (1s, 10s, 100s)
 - After 3 failures, the subscription is paused
 - You receive an email notification
-```
+````
 
 Both sides documented. The partner can build a complete integration from one document.
 
@@ -2198,7 +2198,7 @@ Code and documentation are viewed side-by-side, never requiring the developer to
 **Diataxis default:** Static code blocks with expected output.
 **Stripe override:** Code examples are interactive — copy-paste buttons, language selectors, and in some cases, executable directly from the documentation.
 
-```markdown
+````markdown
 # Diataxis default
 ```python
 payment = stripe.PaymentIntent.create(amount=2000, currency="usd")
@@ -2224,7 +2224,7 @@ intent = stripe.PaymentIntent.create(
   "status": "requires_payment_method"
 }
 ```
-```
+````
 
 ### Documentation as Product Culture
 
@@ -2338,7 +2338,7 @@ Canonical favors a style that is:
 - Structured for scanning (short paragraphs, clear headings)
 - Consistent in formatting (RST or Markdown with strict conventions)
 
-```markdown
+````markdown
 # Canonical style (tutorial)
 In this tutorial, we will set up a basic Juju controller
 on a local LXD cloud. At the end, you will have a working
@@ -2359,7 +2359,7 @@ You should see output like:
 ```
 Creating Juju controller "my-controller" on localhost/localhost
 ```
-```
+````
 
 ### Open-Source Documentation Community
 
@@ -2418,7 +2418,7 @@ Priority 4 (add at scale):
 **Diataxis default:** Separate quickstart document.
 **Minimal override:** The README IS the quickstart. Combine "what is this" + "get started" in one file.
 
-```markdown
+````markdown
 # MyProduct
 
 One sentence: what it does and who it's for.
@@ -2445,7 +2445,7 @@ See [docs/api.md](docs/api.md)
 ## License
 
 MIT
-```
+````
 
 ### Auto-Generate What You Can
 
@@ -2462,7 +2462,7 @@ MIT
 **Diataxis default:** Full sentences, proper grammar, conversational tone.
 **Minimal override:** Bullet points, sentence fragments, and code blocks are fine. Correctness over polish.
 
-```markdown
+````markdown
 # Diataxis default
 To configure the database connection, set the `DATABASE_URL`
 environment variable to a valid PostgreSQL connection string.
@@ -2473,7 +2473,7 @@ Set `DATABASE_URL`:
 ```bash
 DATABASE_URL=postgres://user:pass@host:5432/dbname
 ```
-```
+````
 
 ### Ship Without Perfection
 

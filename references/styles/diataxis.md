@@ -4,6 +4,12 @@ The default writing style for this skill. Diataxis provides per-quadrant style g
 
 The key Diataxis insight: **style follows function.** A tutorial's encouraging tone builds learner confidence. A reference doc's austere precision enables fast lookup. Forcing one uniform style across all content types fights the reader's mental state.
 
+## Contents
+
+- Universal Principles
+- Per-Quadrant Style
+- How Diataxis Style Differs from Generic Style Guides
+
 ## Universal Principles
 
 These apply across all quadrants:

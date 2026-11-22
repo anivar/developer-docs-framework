@@ -2,6 +2,12 @@
 
 Divergences from the Diataxis default when following [Canonical's documentation practice](https://canonical.com/documentation). Apply this overlay when building infrastructure documentation, open-source platform docs (Ubuntu, cloud-native), or when you want documentation treated as a rigorous engineering discipline.
 
+## Contents
+
+- Where Canonical Agrees with Diataxis Default
+- Where Canonical Extends Diataxis
+- When to Choose Canonical Style
+
 ## Where Canonical Agrees with Diataxis Default
 
 Canonical is the primary adopter and promoter of Diataxis — their approach is the closest to pure Diataxis of any organization. Most Diataxis defaults ARE Canonical's conventions.
@@ -63,7 +69,7 @@ Canonical favors a style that is:
 - Structured for scanning (short paragraphs, clear headings)
 - Consistent in formatting (RST or Markdown with strict conventions)
 
-```markdown
+````markdown
 # Canonical style (tutorial)
 In this tutorial, we will set up a basic Juju controller
 on a local LXD cloud. At the end, you will have a working
@@ -84,7 +90,7 @@ You should see output like:
 ```
 Creating Juju controller "my-controller" on localhost/localhost
 ```
-```
+````
 
 ### Open-Source Documentation Community
 

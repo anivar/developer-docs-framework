@@ -11,7 +11,7 @@ The most common conflation in software documentation is between tutorials and ho
 
 A "tutorial" that's actually a how-to guide:
 
-```markdown
+````markdown
 # Tutorial: Configure Email Alerts
 
 To set up email alerts, add the recipient list in your dashboard settings.
@@ -30,7 +30,7 @@ monitoring.AlertRule.create(
     recipients=["ops@example.com"],
 )
 ```
-```
+````
 
 This assumes the reader already knows what alerts are, why they'd want them, and how their system should handle them. That's a how-to guide labeled as a tutorial.
 

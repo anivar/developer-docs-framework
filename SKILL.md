@@ -1,28 +1,23 @@
 ---
 name: diataxis-docs-framework
 description: >
-  Enterprise technical documentation best practices, patterns, and frameworks for
-  developer and partner adoption. Covers content architecture (Diataxis four quadrants),
-  14 content types (tutorials, how-to guides, API reference, SDK docs, migration guides,
-  changelogs, runbooks, integration guides, troubleshooting, architecture docs),
-  pluggable writing styles (Diataxis, Google, Microsoft, Stripe, Canonical, Minimal),
-  information architecture, docs-as-code workflows, documentation audit,
-  anti-patterns checklist, and developer experience (DX) strategy. 27 rules, 5 references, 6 style guides.
-  Baseline: Diataxis + Google OpenDocs + Good Docs Project.
-  Triggers on: "write docs", "document this", "API docs", "developer docs", "migration guide",
-  "changelog", "tutorial", "how-to guide", "reference docs", "documentation strategy",
-  "docs audit", "information architecture", "developer experience", "partner docs",
-  "SDK documentation", "runbook", "troubleshooting guide", "integration guide",
-  "quickstart", "getting started", "technical writing", "docs-as-code", "DX",
-  mentions of "Diataxis", "Good Docs Project", or "Google OpenDocs".
+  Rules and templates for developer and partner documentation built on Diataxis: choose the page
+  type, then write or review tutorials, how-to guides, API and SDK reference, explanations,
+  migration guides, changelogs, runbooks, integration and troubleshooting guides; plan information
+  architecture and docs-as-code; audit a docs set for gaps and anti-patterns. Six writing styles:
+  Diataxis, Google, Microsoft, Stripe, Canonical, Minimal. Use this skill whenever the user writes,
+  restructures or reviews documentation for developers, partners or operators, even if they only say
+  "document this" or "write a README section". Triggers on: "write docs", "API docs", "developer
+  docs", "SDK docs", "migration guide", "changelog", "tutorial", "how-to", "quickstart", "getting
+  started", "runbook", "troubleshooting guide", "integration guide", "docs audit", "documentation
+  strategy", "information architecture", "docs-as-code", "developer experience", Diataxis, Good Docs
+  Project, Google OpenDocs.
 license: MIT
-user-invocable: false
-agentic: false
 compatibility: "Any software project requiring technical documentation"
 metadata:
   author: Anivar Aravind
   author_url: https://anivar.net
-  version: 1.2.0
+  version: 1.2.1
   tags: documentation, technical-writing, diataxis, api-docs, developer-experience, dx, tutorials, how-to, reference, migration, changelog, enterprise, partner-docs, information-architecture, style-guide, docs-as-code
 ---
 

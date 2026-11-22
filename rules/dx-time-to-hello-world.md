@@ -30,7 +30,7 @@ Create a service account and generate credentials...
 
 ## Correct
 
-```markdown
+````markdown
 # Quickstart
 
 ## Install
@@ -63,7 +63,7 @@ SMS.
 ## Next steps
 - [Tutorial: Build a notification service](/tutorials/notifications)
 - [API reference](/reference)
-```
+````
 
 Three steps. Under 5 minutes. Working result.
 

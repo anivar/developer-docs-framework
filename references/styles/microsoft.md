@@ -2,6 +2,12 @@
 
 Divergences from the Diataxis default when following the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/). Apply this overlay when writing enterprise B2B documentation, internal platform docs, or when your organization follows Microsoft conventions.
 
+## Contents
+
+- Where Microsoft Agrees with Diataxis Default
+- Where Microsoft Diverges
+- When to Choose Microsoft Style
+
 ## Where Microsoft Agrees with Diataxis Default
 
 - Active voice preferred

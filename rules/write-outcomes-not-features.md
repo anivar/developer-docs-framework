@@ -33,7 +33,7 @@ This describes what exists. The developer must figure out how these pieces solve
 
 Outcome-centric documentation:
 
-```markdown
+````markdown
 # Move Data from PostgreSQL to Your Data Warehouse
 
 Set up a data sync in three steps:
@@ -54,7 +54,7 @@ pipeline = dataflow.Pipeline.create(
 
 ## 3. Start the sync
 ...
-```
+````
 
 The developer sees their goal ("move data to warehouse") and follows a path to achieve it.
 

@@ -22,7 +22,7 @@ Four sentences of telling. No showing. The developer has no idea what an event l
 
 ## Correct
 
-```markdown
+````markdown
 # Event Streams
 
 Subscribe to a stream and process events as they arrive:
@@ -50,7 +50,7 @@ for event in consumer.stream():
     print(f"Order {event.data['order_id']} shipped")
     event.ack()
 ```
-```
+````
 
 Real payload. Real code. The developer understands immediately.
 

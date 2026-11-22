@@ -2,6 +2,12 @@
 
 Divergences from the Diataxis default when following the [Google Developer Documentation Style Guide](https://developers.google.com/style). Apply this overlay when your organization uses Google's conventions or when writing for Google-adjacent ecosystems (Android, Firebase, Cloud, open-source projects using Google standards).
 
+## Contents
+
+- Where Google Agrees with Diataxis Default
+- Where Google Diverges
+- When to Choose Google Style
+
 ## Where Google Agrees with Diataxis Default
 
 - Active voice preferred

@@ -26,7 +26,7 @@ Only your side documented. The partner doesn't know: What does the telemetry pay
 
 ## Correct
 
-```markdown
+````markdown
 # Device Telemetry Integration
 
 ## 1. Register your endpoint (your side → our API)
@@ -60,7 +60,7 @@ If your endpoint returns non-200 or times out:
 - We retry 3 times with exponential backoff (1s, 10s, 100s)
 - After 3 failures, the subscription is paused
 - You receive an email notification
-```
+````
 
 Both sides documented. The partner can build a complete integration from one document.
 

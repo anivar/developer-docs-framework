@@ -2,6 +2,22 @@
 
 Ready-to-use structural templates for each content type. Copy the relevant template and fill in the sections. Guided by Good Docs Project templates and patterns from Stripe, AWS, and Google documentation.
 
+## Contents
+
+- How to Use These Templates
+- Tutorial Template
+- Quickstart Template
+- How-to Guide Template
+- Integration Guide Template
+- Migration Guide Template
+- API Reference Template (per endpoint)
+- Changelog Template
+- Explanation Template
+- Troubleshooting Template
+- Runbook Template
+- Architecture Decision Record (ADR) Template
+- Glossary Entry Template
+
 ## How to Use These Templates
 
 1. Choose the template matching your content type
@@ -14,7 +30,7 @@ Ready-to-use structural templates for each content type. Copy the relevant templ
 
 ## Tutorial Template
 
-```markdown
+````markdown
 # Build [a concrete thing] with [product]
 
 <!-- Tutorials are learning-oriented. The reader is a student, not a practitioner. -->
@@ -72,13 +88,13 @@ You've built [what they built]. Along the way, you learned how to:
 - [Link to next tutorial or how-to guide]
 - [Link to relevant explanation doc for deeper understanding]
 - [Link to API reference for the resources used]
-```
+````
 
 ---
 
 ## Quickstart Template
 
-```markdown
+````markdown
 # Quickstart
 
 <!-- Quickstarts are for experienced developers who want the fastest path to "hello world." -->
@@ -120,13 +136,13 @@ Response:
 - [Tutorial for deeper learning]
 - [How-to guide for common tasks]
 - [API reference for all endpoints]
-```
+````
 
 ---
 
 ## How-to Guide Template
 
-```markdown
+````markdown
 # How to [accomplish specific goal]
 
 <!-- How-to guides are task-oriented. The reader has a specific goal and wants to achieve it. -->
@@ -166,13 +182,13 @@ Response:
 
 - [Link to related how-to guide]
 - [Link to troubleshooting if something goes wrong]
-```
+````
 
 ---
 
 ## Integration Guide Template
 
-```markdown
+````markdown
 # Integrate [product] with [partner system / use case]
 
 ## Overview
@@ -237,13 +253,13 @@ Response:
 ## Support
 
 [How to get help: support channels, SLAs, escalation paths]
-```
+````
 
 ---
 
 ## Migration Guide Template
 
-```markdown
+````markdown
 # Migrate from v[X] to v[Y]
 
 ## Overview
@@ -332,13 +348,13 @@ If something goes wrong:
 ## Getting help
 
 [Support channels for migration issues]
-```
+````
 
 ---
 
 ## API Reference Template (per endpoint)
 
-```markdown
+````markdown
 ## [Method] [Path]
 
 <!-- e.g., POST /v1/payments -->
@@ -394,7 +410,7 @@ If something goes wrong:
 | 400 | `invalid_request` | [what's wrong and how to fix] |
 | 401 | `unauthorized` | [what's wrong and how to fix] |
 | 404 | `not_found` | [what's wrong and how to fix] |
-```
+````
 
 ---
 
@@ -475,7 +491,7 @@ If something goes wrong:
 
 ## Troubleshooting Template
 
-```markdown
+````markdown
 # Troubleshooting [area/feature]
 
 <!-- Organize by symptom (what the user sees), not by cause (what's wrong). -->
@@ -503,7 +519,7 @@ If something goes wrong:
 ## [Next error message or symptom]
 
 [Same pattern: symptom → diagnosis → solution → explanation]
-```
+````
 
 ---
 

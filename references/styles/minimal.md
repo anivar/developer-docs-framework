@@ -2,6 +2,12 @@
 
 Divergences from the Diataxis default when documentation speed and lean coverage matter more than comprehensive depth. Apply this overlay for early-stage startups, internal tools, MVPs, hackathon projects, or any product where developer time is the constraint and "good enough docs now" beats "perfect docs never."
 
+## Contents
+
+- Where Minimal Agrees with Diataxis Default
+- Where Minimal Diverges
+- When to Choose Minimal Style
+
 ## Where Minimal Agrees with Diataxis Default
 
 - Content types should still be separated (even if you only have 2-3 types)
@@ -37,7 +43,7 @@ Priority 4 (add at scale):
 **Diataxis default:** Separate quickstart document.
 **Minimal override:** The README IS the quickstart. Combine "what is this" + "get started" in one file.
 
-```markdown
+````markdown
 # MyProduct
 
 One sentence: what it does and who it's for.
@@ -64,7 +70,7 @@ See [docs/api.md](docs/api.md)
 ## License
 
 MIT
-```
+````
 
 ### Auto-Generate What You Can
 
@@ -81,7 +87,7 @@ MIT
 **Diataxis default:** Full sentences, proper grammar, conversational tone.
 **Minimal override:** Bullet points, sentence fragments, and code blocks are fine. Correctness over polish.
 
-```markdown
+````markdown
 # Diataxis default
 To configure the database connection, set the `DATABASE_URL`
 environment variable to a valid PostgreSQL connection string.
@@ -92,7 +98,7 @@ Set `DATABASE_URL`:
 ```bash
 DATABASE_URL=postgres://user:pass@host:5432/dbname
 ```
-```
+````
 
 ### Ship Without Perfection
 

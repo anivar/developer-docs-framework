@@ -9,7 +9,7 @@ Reference documentation is the map of your product. Maps don't tell you where to
 
 ## Incorrect
 
-```markdown
+````markdown
 # POST /v1/users
 
 You should use this endpoint to create a new user. First,
@@ -25,13 +25,13 @@ user = admin.User.create(email="ada@example.com", role="viewer")
 ```
 
 The role field uses RBAC because it provides fine-grained access control.
-```
+````
 
 This mixes instruction ("first, make sure"), opinion ("we recommend"), how-to ("here's how"), and explanation ("because it provides").
 
 ## Correct
 
-```markdown
+````markdown
 # POST /v1/users
 
 Creates a new user in the specified organization.
@@ -67,7 +67,7 @@ admin.User.create(email="ada@example.com", role="editor", org_id="org_42")
 |------|-------------|
 | `email_taken` | A user with this email already exists in the organization. |
 | `invalid_role` | Role must be one of: owner, admin, editor, viewer. |
-```
+````
 
 ## Principle
 
